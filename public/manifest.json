@@ -1,0 +1,24 @@
+{
+  "name": "KOMA Coffee - Coffee Shop Terbaik di Jakarta & Bali",
+  "short_name": "KOMA Coffee",
+  "description": "Tempat nongkrong nyaman dengan kopi specialty berkualitas tinggi di Jakarta dan Bali",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#EDE7DB",
+  "theme_color": "#3D3229",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/coffee-favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["food", "lifestyle", "business"],
+  "lang": "id-ID",
+  "dir": "ltr",
+  "scope": "/",
+  "related_applications": [],
+  "prefer_related_applications": false
+}
