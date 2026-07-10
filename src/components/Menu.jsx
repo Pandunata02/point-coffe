@@ -1,6 +1,6 @@
 import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
-import { ExternalLink } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
 
 const BRANCH_DATA = [
   {
@@ -13,7 +13,7 @@ const BRANCH_DATA = [
   {
     id: 'komaPoint',
     name: 'KOMA',
-    tagline: 'COFFEE.CULTURE.COMMUNITY',
+    tagline: 'COFFEE CULTURE COMMUNITY',
     photo: 'https://res.cloudinary.com/dpadqzd98/image/upload/v1780172190/koma-point_fgy6tg.png?w=1600',
     pdf: '/koma-point.pdf',
   },
@@ -106,17 +106,15 @@ const Menu = ({ branch = 'komaMambal' }) => {
                     </span>
                   </div>
 
-                  {/* Right: CLICK FOR MENU */}
-                  <div className="flex flex-row sm:flex-col items-center sm:items-end gap-1.5 sm:gap-1 self-start sm:self-auto">
-                    <span className="text-[11px] sm:text-[10px] lg:text-xs font-sans text-white/60 uppercase tracking-widest">
-                      Click For
-                    </span>
-                    <div className="flex items-center gap-1">
-                      <span className="text-xl sm:text-2xl lg:text-3xl font-display text-white leading-none">
-                        Menu
-                      </span>
-                      <ExternalLink className="w-4 h-4 sm:w-5 sm:h-5 text-white/80 group-hover:text-gold transition-colors duration-200" />
-                    </div>
+                  {/* Right: Arrow badge CTA */}
+                  <div className="
+                    w-11 h-11 sm:w-12 sm:h-12 lg:w-14 lg:h-14
+                    rounded-full bg-white/10 backdrop-blur-sm border border-white/30
+                    flex items-center justify-center self-end sm:self-auto
+                    group-hover:bg-gold group-hover:border-gold group-hover:scale-110
+                    transition-all duration-300 ease-out
+                  ">
+                    <ArrowUpRight className="w-5 h-5 sm:w-6 sm:h-6 text-white" strokeWidth={2.5} />
                   </div>
                 </div>
               </div>

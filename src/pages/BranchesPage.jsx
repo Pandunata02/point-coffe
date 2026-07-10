@@ -43,7 +43,7 @@ const BranchesPage = () => {
       email: 'mambal@aromacafe.id',
       hours: 'Monday - Sunday: 07:00 - 22:00',
       description: 'Our first location with a warm, classic atmosphere — perfect for meetings or me-time while enjoying premium coffee.',
-      mapUrl: 'https://www.google.com/maps?cid=14121506186310916132&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAMYASAF&hl=id&gl=ID&source=embed',
+      mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3945.507867672257!2d115.21512447595671!3d-8.547063286647832!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd23d7dabe9fe65%3A0xc3f9ab0eb88b1824!2sKOMA%20-%20Kopi%20Mambal!5e0!3m2!1sid!2sid!4v1783688243831!5m2!1sid!2sid',
     },
     komaPoint: {
       id: 'komaPoint',
@@ -54,18 +54,18 @@ const BranchesPage = () => {
       email: 'denpasar@aromacafe.id',
       hours: 'Monday - Friday: 06:30 - 21:00, Saturday - Sunday: 08:00 - 21:00',
       description: 'In the heart of the business district, we offer a modern space designed for maximum productivity paired with high-quality coffee.',
-      mapUrl: 'https://www.google.com/maps?cid=4396032764357287127&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAMYASAF&hl=id&gl=ID&source=embed',
+      mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3944.4596079705275!2d115.22093617595804!3d-8.647762087960146!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd2418f3391319f%3A0x3d01d8820c7e9cd7!2sKoma%20Point!5e0!3m2!1sid!2sid!4v1783689707707!5m2!1sid!2sid',
     },
     komaRenon: {
       id: 'komaRenon',
       name: 'Koma Renon',
       hero: 'https://res.cloudinary.com/dpadqzd98/image/upload/v1780171602/koma-renon_pct3mq.jpg?w=1600',
-      address: 'Jl. Raya Ubud No. 88, Gianyar, Bali 80571',
+      address: 'Jl. Prof. Moh. Yamin No.12a, Sumerta Kelod, Denpasar Selatan, Kota Denpasar, Bali 80239',
       phone: '+62 361 123456',
       email: 'bali@aromacafe.id',
       hours: 'Monday - Sunday: 07:00 - 21:00',
       description: 'Escape to paradise with stunning rice terrace views — a perfect blend of nature and specialty coffee.',
-      mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3944.556!2d115.2889!3d-8.5069!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zOMKwMzAnMjQuOSJTIDExNcKwMTcnMjAuMCJF!5e0!3m2!1sen!2sid!4v1234567890',
+      mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15776.6425286229!2d115.23489404637856!3d-8.676269961945035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd2410039aaccff%3A0x7b8b004720a0222a!2sKOMA%20HOUSE!5e0!3m2!1sid!2sid!4v1783689868266!5m2!1sid!2sid',
     },
   };
 
