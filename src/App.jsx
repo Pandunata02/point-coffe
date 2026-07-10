@@ -48,9 +48,9 @@ function App() {
           <main>
             <Routes>
               <Route path="/" element={<HomePage />} />
-              <Route path="/cerita-kami" element={<StoryPage />} />
-              <Route path="/cabang-menu" element={<BranchesPage />} />
-              <Route path="/reservasi" element={<ReservationPage />} />
+              <Route path="/our-story" element={<StoryPage />} />
+              <Route path="/branches-menu" element={<BranchesPage />} />
+              <Route path="/reservation" element={<ReservationPage />} />
               <Route path="/partnership" element={<PartnershipPage />} />
               <Route path="*" element={<NotFoundPage />} />
             </Routes>

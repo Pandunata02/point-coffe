@@ -10,24 +10,24 @@ const BranchesPage = () => {
   
   const [activeTab, setActiveTab] = useState(branchFromUrl || 'komaMambal');
   const sectionRef = useRef(null);
-  const tabsRef = useRef(null); // Ref untuk Tab Buttons section
+  const tabsRef = useRef(null); // Ref for Tab Buttons section
   const isInView = useInView(sectionRef, { once: true, margin: '-100px' });
 
-  // Update activeTab jika URL berubah
+  // Update activeTab when URL changes
   useEffect(() => {
     if (branchFromUrl) {
       setActiveTab(branchFromUrl);
     }
   }, [branchFromUrl]);
 
-  // Scroll smooth dari Hero ke Tab Buttons + Branch Details jika ada query parameter
+  // Smooth scroll from Hero to Tab Buttons + Branch Details when query parameter exists
   useEffect(() => {
     if (branchFromUrl && tabsRef.current) {
-      // Delay untuk memastikan render selesai
+      // Delay to ensure render is complete
       setTimeout(() => {
-        tabsRef.current?.scrollIntoView({ 
-          behavior: 'smooth', 
-          block: 'start' 
+        tabsRef.current?.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
         });
       }, 300);
     }
@@ -41,8 +41,8 @@ const BranchesPage = () => {
       address: 'Jl. Pudak IV No.3, Mambal, Kecamatan Ubud, Kabupaten Badung, Bali',
       phone: '+62 21 3456789',
       email: 'mambal@aromacafe.id',
-      hours: 'Senin - Minggu: 07:00 - 22:00',
-      description: 'Lokasi pertama kami dengan suasana klasik yang hangat, perfect untuk meeting atau me-time sambil menikmati kopi premium.',
+      hours: 'Monday - Sunday: 07:00 - 22:00',
+      description: 'Our first location with a warm, classic atmosphere — perfect for meetings or me-time while enjoying premium coffee.',
       mapUrl: 'https://www.google.com/maps?cid=14121506186310916132&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAMYASAF&hl=id&gl=ID&source=embed',
     },
     komaPoint: {
@@ -52,8 +52,8 @@ const BranchesPage = () => {
       address: 'Jl. Trijata No.5, Dangin Puri Kangin, Kec. Denpasar Utara, Kota Denpasar, Bali',
       phone: '+62 21 5678901',
       email: 'denpasar@aromacafe.id',
-      hours: 'Senin - Jumat: 06:30 - 21:00, Sabtu - Minggu: 08:00 - 21:00',
-      description: 'Di tengah distrik bisnis, kami menawarkan ruang modern untuk produktivitas maksimal dengan kopi berkualitas tinggi.',
+      hours: 'Monday - Friday: 06:30 - 21:00, Saturday - Sunday: 08:00 - 21:00',
+      description: 'In the heart of the business district, we offer a modern space designed for maximum productivity paired with high-quality coffee.',
       mapUrl: 'https://www.google.com/maps?cid=4396032764357287127&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAMYASAF&hl=id&gl=ID&source=embed',
     },
     komaRenon: {
@@ -63,8 +63,8 @@ const BranchesPage = () => {
       address: 'Jl. Raya Ubud No. 88, Gianyar, Bali 80571',
       phone: '+62 361 123456',
       email: 'bali@aromacafe.id',
-      hours: 'Senin - Minggu: 07:00 - 21:00',
-      description: 'Escape to paradise dengan pemandangan rice terrace yang menakjubkan, kombinasi sempurna antara nature dan specialty coffee.',
+      hours: 'Monday - Sunday: 07:00 - 21:00',
+      description: 'Escape to paradise with stunning rice terrace views — a perfect blend of nature and specialty coffee.',
       mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3944.556!2d115.2889!3d-8.5069!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zOMKwMzAnMjQuOSJTIDExNcKwMTcnMjAuMCJF!5e0!3m2!1sen!2sid!4v1234567890',
     },
   };
@@ -97,10 +97,10 @@ const BranchesPage = () => {
         >
           <div>
             <h1 className="text-5xl md:text-6xl font-bold text-cream mb-4 font-display drop-shadow-lg">
-              Cabang & Menu
+              Branches & Menu
             </h1>
             <p className="text-xl text-cream/90 drop-shadow-md">
-              Pilih cabang untuk melihat lokasi dan menu
+              Choose a branch to view its location and menu
             </p>
           </div>
         </motion.div>
@@ -152,7 +152,7 @@ const BranchesPage = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-coffee-900/40 to-transparent" />
               </div>
 
-              {/* Right: Branch Info - No Background (menyatu dengan body) */}
+              {/* Right: Branch Info - No Background (blended with body) */}
               <div className="flex flex-col justify-center">
                 {/* Title */}
                 <h2 className="text-4xl md:text-5xl font-bold text-coffee-800 mb-4 font-serif">
@@ -170,7 +170,7 @@ const BranchesPage = () => {
                     <MapPin className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-coffee-800 font-bold text-lg mb-1">Lokasi</h3>
+                    <h3 className="text-coffee-800 font-bold text-lg mb-1">Location</h3>
                     <p className="text-coffee-700">{currentBranch.address}</p>
                   </div>
                 </div>
@@ -181,7 +181,7 @@ const BranchesPage = () => {
                     <Clock className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-coffee-800 font-bold text-lg mb-1">Jam Operasional</h3>
+                    <h3 className="text-coffee-800 font-bold text-lg mb-1">Opening Hours</h3>
                     <p className="text-coffee-700">{currentBranch.hours}</p>
                   </div>
                 </div>
@@ -192,7 +192,7 @@ const BranchesPage = () => {
                     <Phone className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-coffee-800 font-bold text-lg mb-1">Kontak</h3>
+                    <h3 className="text-coffee-800 font-bold text-lg mb-1">Contact</h3>
                     <p className="text-coffee-700 mb-1">{currentBranch.phone}</p>
                     <p className="text-coffee-600 text-sm">{currentBranch.email}</p>
                   </div>
@@ -230,7 +230,7 @@ const BranchesPage = () => {
               Location
             </h2>
             <p className="text-xl text-coffee-700 max-w-2xl mx-auto">
-              Temukan kami di lokasi yang mudah diakses dengan suasana yang nyaman
+              Find us at locations that are easy to reach with a comfortable atmosphere
             </p>
           </motion.div>
 

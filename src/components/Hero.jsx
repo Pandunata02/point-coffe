@@ -86,14 +86,8 @@ const Hero = () => {
     return (
         <section
             id="hero"
-            className="relative h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-coffee-900 via-coffee-800 to-coffee-900"
+            className="relative h-screen flex items-center justify-center overflow-hidden"
         >
-            {/* Parallax Background Image */}
-            <div
-                className="absolute inset-0 bg-[url('https://res.cloudinary.com/dpadqzd98/image/upload/v1780171603/about-bg_f3vrt8.jpg?w=1920')] bg-cover bg-center bg-fixed opacity-30"
-                style={{ transform: 'translateZ(-1px) scale(1.5)' }}
-            />
-
             {/* Particles */}
             <div className="absolute inset-0">
                 <Particles options={particlesOptions} />

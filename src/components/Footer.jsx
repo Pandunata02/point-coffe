@@ -8,9 +8,9 @@ const Footer = () => {
     };
 
     const branches = [
-        { name: 'Koma Mambal', to: '/cabang-menu?branch=komaMambal' },
-        { name: 'Koma Point', to: '/cabang-menu?branch=komaPoint' },
-        { name: 'Koma Renon', to: '/cabang-menu?branch=komaRenon' },
+        { name: 'Koma Mambal', to: '/branches-menu?branch=komaMambal' },
+        { name: 'Koma Point', to: '/branches-menu?branch=komaPoint' },
+        { name: 'Koma Renon', to: '/branches-menu?branch=komaRenon' },
     ];
 
     return (
@@ -30,15 +30,15 @@ const Footer = () => {
                             </span>
                         </motion.div>
                         <p className="text-cream/70 leading-relaxed">
-                            Brewing excellence since 2020. Kami menghadirkan pengalaman kopi terbaik
-                            dengan suasana yang hangat di setiap cabang kami.
+                            Brewing excellence since 2020. We deliver the finest coffee experience
+                            with a warm atmosphere at every branch.
                         </p>
                     </div>
 
-                    {/* Column 2: Cabang Kami */}
+                    {/* Column 2: Our Branches */}
                     <div>
                         <h3 className="text-cream font-bold text-xl mb-6 font-serif">
-                            Cabang Kami
+                            Our Branches
                         </h3>
                         <ul className="space-y-3">
                             {branches.map((branch, index) => (
@@ -55,10 +55,10 @@ const Footer = () => {
                         </ul>
                     </div>
 
-                    {/* Column 3: Kontak */}
+                    {/* Column 3: Contact */}
                     <div>
                         <h3 className="text-cream font-bold text-xl mb-6 font-serif">
-                            Kontak
+                            Contact
                         </h3>
                         <div className="space-y-4">
                             <div className="flex items-center gap-3">

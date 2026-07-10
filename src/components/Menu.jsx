@@ -85,7 +85,7 @@ const Menu = ({ branch = 'komaMambal' }) => {
               `}
             >
               {/* Photo Container */}
-              <div className="relative h-[300px] sm:h-[360px] lg:h-[480px] bg-coffee-900 overflow-hidden">
+              <div className="relative h-[280px] sm:h-[360px] lg:h-[480px] bg-coffee-900 overflow-hidden">
                 <img
                   src={card.photo}
                   alt={`${card.name} ${card.tagline}`}
@@ -95,30 +95,27 @@ const Menu = ({ branch = 'komaMambal' }) => {
                 <div className="absolute inset-0 bg-gradient-to-t from-coffee-900/90 via-coffee-900/30 to-transparent" />
 
                 {/* Bottom Overlay */}
-                <div className="absolute inset-x-0 bottom-0 p-6 flex flex-col justify-end h-full">
-                  {/* Top row: KOMA + tagline left, CLICK FOR right */}
-                  <div className="flex justify-between items-end mb-4">
-                    {/* Left: Brand + Tagline */}
-                    <div className="flex flex-col">
-                      <span className="text-3xl sm:text-4xl lg:text-5xl font-display text-white leading-none tracking-tight">
-                        {card.name}
-                      </span>
-                      <span className="text-[10px] sm:text-xs lg:text-sm font-sans text-white/70 uppercase tracking-[0.2em] mt-1 max-w-[60%] leading-tight">
-                        {card.tagline}
-                      </span>
-                    </div>
+                <div className="absolute inset-x-0 bottom-0 p-4 sm:p-6 flex flex-col sm:flex-row sm:justify-between sm:items-end gap-3 sm:gap-0">
+                  {/* Left: Brand + Tagline */}
+                  <div className="flex flex-col">
+                    <span className="text-2xl sm:text-4xl lg:text-5xl font-display text-white leading-none tracking-tight">
+                      {card.name}
+                    </span>
+                    <span className="text-[11px] sm:text-xs lg:text-sm font-sans text-white/70 uppercase tracking-[0.15em] sm:tracking-[0.2em] mt-1 leading-tight">
+                      {card.tagline}
+                    </span>
+                  </div>
 
-                    {/* Right: CLICK FOR MENU */}
-                    <div className="flex flex-col items-end">
-                      <span className="text-[9px] sm:text-[10px] lg:text-xs font-sans text-white/60 uppercase tracking-widest">
-                        Click For
+                  {/* Right: CLICK FOR MENU */}
+                  <div className="flex flex-row sm:flex-col items-center sm:items-end gap-1.5 sm:gap-1 self-start sm:self-auto">
+                    <span className="text-[11px] sm:text-[10px] lg:text-xs font-sans text-white/60 uppercase tracking-widest">
+                      Click For
+                    </span>
+                    <div className="flex items-center gap-1">
+                      <span className="text-xl sm:text-2xl lg:text-3xl font-display text-white leading-none">
+                        Menu
                       </span>
-                      <div className="flex items-center gap-1">
-                        <span className="text-xl sm:text-2xl lg:text-3xl font-display text-white leading-none">
-                          Menu
-                        </span>
-                        <ExternalLink className="w-4 h-4 sm:w-5 sm:h-5 text-white/80 group-hover:text-gold transition-colors duration-200" />
-                      </div>
+                      <ExternalLink className="w-4 h-4 sm:w-5 sm:h-5 text-white/80 group-hover:text-gold transition-colors duration-200" />
                     </div>
                   </div>
                 </div>

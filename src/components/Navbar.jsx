@@ -18,10 +18,10 @@ const Navbar = () => {
     }, []);
 
     const navLinks = [
-        { name: 'Beranda', to: '/' },
-        { name: 'Cerita Kami', to: '/cerita-kami' },
-        { name: 'Cabang & Menu', to: '/cabang-menu' },
-        { name: 'Reservasi', to: '/reservasi' },
+        { name: 'Home', to: '/' },
+        { name: 'Our Story', to: '/our-story' },
+        { name: 'Branches & Menu', to: '/branches-menu' },
+        { name: 'Reservation', to: '/reservation' },
         { name: 'Partnership', to: '/partnership' },
     ];
 
@@ -66,10 +66,10 @@ const Navbar = () => {
                         {/* <motion.button
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
-                            onClick={() => navigate('/reservasi')}
+                            onClick={() => navigate('/reservation')}
                             className="bg-gold hover:bg-gold-dark text-white px-4 lg:px-6 py-2 rounded-full font-semibold transition-colors duration-300 shadow-lg text-sm lg:text-base whitespace-nowrap flex-shrink-0"
                         >
-                            Reservasi Sekarang
+                            Book Now
                         </motion.button> */}
                     </div>
 
@@ -144,12 +144,12 @@ const Navbar = () => {
                             {/* <div className="px-6 py-6 border-t border-beige-300">
                                 <button
                                     onClick={() => {
-                                        navigate('/reservasi');
+                                        navigate('/reservation');
                                         setIsMobileMenuOpen(false);
                                     }}
                                     className="w-full bg-gold hover:bg-gold-dark text-white px-6 py-3 rounded-full font-semibold transition-colors duration-300 shadow-md"
                                 >
-                                    Reservasi Sekarang
+                                    Book Now
                                 </button>
                             </div> */}
                         </motion.div>

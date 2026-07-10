@@ -29,11 +29,11 @@ const NotFoundPage = () => {
 
         {/* Message */}
         <h2 className="text-3xl md:text-4xl font-bold text-coffee-800 mb-6 font-serif">
-          Halaman Tidak Ditemukan
+          Page Not Found
         </h2>
         <p className="text-xl text-coffee-700 mb-12 leading-relaxed">
-          Sepertinya kopi yang Anda cari tidak ada di menu kami. 
-          Mari kita cari sesuatu yang lebih nikmat!
+          It seems the coffee you're looking for isn't on our menu.
+          Let's find something even better!
         </p>
 
         {/* Buttons */}
@@ -45,18 +45,18 @@ const NotFoundPage = () => {
               className="bg-gold hover:bg-gold-dark text-white px-8 py-4 rounded-full font-semibold transition-colors shadow-lg flex items-center gap-2 mx-auto sm:mx-0"
             >
               <Home className="w-5 h-5" />
-              Kembali ke Beranda
+              Back to Home
             </motion.button>
           </Link>
 
-          <Link to="/cabang-menu">
+          <Link to="/branches-menu">
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="bg-coffee-800 hover:bg-coffee-900 text-cream px-8 py-4 rounded-full font-semibold transition-colors shadow-lg flex items-center gap-2 mx-auto sm:mx-0"
             >
               <Search className="w-5 h-5" />
-              Lihat Menu
+              View Menu
             </motion.button>
           </Link>
         </div>

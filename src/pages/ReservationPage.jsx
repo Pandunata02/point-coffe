@@ -43,28 +43,28 @@ const ReservationPage = () => {
     
     const selectedBranch = branches.find(b => b.id === formData.branch);
     
-    const formattedDate = formData.date 
-      ? formData.date.toLocaleDateString('id-ID', { 
-          day: '2-digit', 
-          month: '2-digit', 
-          year: 'numeric' 
+    const formattedDate = formData.date
+      ? formData.date.toLocaleDateString('en-US', {
+          day: '2-digit',
+          month: '2-digit',
+          year: 'numeric'
         })
       : '';
-    
-    const message = `Halo ${selectedBranch.name}!
 
-Saya ingin melakukan reservasi:
+    const message = `Hi ${selectedBranch.name}!
 
-*Informasi Pribadi:*
-Nama: ${formData.name}
+I would like to make a reservation:
+
+*Personal Information:*
+Name: ${formData.name}
 Email: ${formData.email}
 WhatsApp: ${formData.whatsapp}
 
-*Detail Reservasi:*
-Cabang: ${selectedBranch.name}
-Tanggal: ${formattedDate}
-Waktu: ${formData.time}
-Jumlah Tamu: ${formData.guests} orang`;
+*Reservation Details:*
+Branch: ${selectedBranch.name}
+Date: ${formattedDate}
+Time: ${formData.time}
+Number of Guests: ${formData.guests}`;
 
     const encodedMessage = encodeURIComponent(message);
     const whatsappUrl = `https://wa.me/${selectedBranch.phone}?text=${encodedMessage}`;
@@ -91,10 +91,10 @@ Jumlah Tamu: ${formData.guests} orang`;
         >
           <div>
             <h1 className="text-5xl md:text-6xl font-bold text-cream mb-4 font-display drop-shadow-sm">
-              Reservasi
+              Reservation
             </h1>
             <p className="text-xl text-cream/80 max-w-2xl mx-auto">
-              Pesan tempat favorit Anda dan nikmati pengalaman istimewa
+              Book your favorite spot and enjoy a special experience
             </p>
           </div>
         </motion.div>
@@ -113,14 +113,14 @@ Jumlah Tamu: ${formData.guests} orang`;
           <div className="mb-12">
             <h2 className="text-3xl font-bold text-coffee-800 mb-8 font-serif flex items-center gap-3">
               <Users className="w-8 h-8 text-gold" />
-              Informasi Pribadi
+              Personal Information
             </h2>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {/* Name */}
               <div>
                 <label htmlFor="name" className="block text-coffee-800 font-semibold mb-2">
-                  Nama Lengkap <span className="text-red-400">*</span>
+                  Full Name <span className="text-red-400">*</span>
                 </label>
                 <input
                   type="text"
@@ -130,7 +130,7 @@ Jumlah Tamu: ${formData.guests} orang`;
                   onChange={handleChange}
                   required
                   className="w-full px-4 py-3 rounded-xl bg-white border border-beige-300 text-coffee-800 placeholder-coffee-700/40 focus:outline-none focus:border-gold transition-colors shadow-sm"
-                  placeholder="Masukkan nama Anda"
+                  placeholder="Enter your name"
                 />
               </div>
 
@@ -154,7 +154,7 @@ Jumlah Tamu: ${formData.guests} orang`;
               {/* WhatsApp */}
               <div className="md:col-span-2">
                 <label htmlFor="whatsapp" className="block text-coffee-800 font-semibold mb-2">
-                  Nomor WhatsApp <span className="text-red-400">*</span>
+                  WhatsApp Number <span className="text-red-400">*</span>
                 </label>
                 <input
                   type="tel"
@@ -174,7 +174,7 @@ Jumlah Tamu: ${formData.guests} orang`;
           <div>
             <h2 className="text-3xl font-bold text-coffee-800 mb-8 font-serif flex items-center gap-3">
               <Calendar className="w-8 h-8 text-gold" />
-              Detail Reservasi
+              Reservation Details
             </h2>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -182,7 +182,7 @@ Jumlah Tamu: ${formData.guests} orang`;
               <div className="md:col-span-2">
                 <label htmlFor="branch" className="text-coffee-800 font-semibold mb-2 flex items-center gap-2">
                   <MapPin className="w-5 h-5" />
-                  Pilih Cabang <span className="text-red-400">*</span>
+                  Choose Branch <span className="text-red-400">*</span>
                 </label>
                 <select
                   id="branch"
@@ -204,14 +204,14 @@ Jumlah Tamu: ${formData.guests} orang`;
               <div>
                 <label className="text-coffee-800 font-semibold mb-2 flex items-center gap-2">
                   <Calendar className="w-5 h-5" />
-                  Tanggal <span className="text-red-400">*</span>
+                  Date <span className="text-red-400">*</span>
                 </label>
                 <DatePicker
                   selected={formData.date}
                   onChange={handleDateChange}
                   minDate={new Date()}
-                  dateFormat="dd/MM/yyyy"
-                  placeholderText="Pilih tanggal"
+                  dateFormat="MM/dd/yyyy"
+                  placeholderText="Select a date"
                   required
                   className="w-full px-4 py-3 rounded-xl bg-white border border-beige-300 text-coffee-800 focus:outline-none focus:border-gold transition-colors shadow-sm"
                   calendarClassName="custom-datepicker"
@@ -223,7 +223,7 @@ Jumlah Tamu: ${formData.guests} orang`;
               <div>
                 <label htmlFor="time" className="text-coffee-800 font-semibold mb-2 flex items-center gap-2">
                   <Clock className="w-5 h-5" />
-                  Waktu <span className="text-red-400">*</span>
+                  Time <span className="text-red-400">*</span>
                 </label>
                 <input
                   type="time"
@@ -240,7 +240,7 @@ Jumlah Tamu: ${formData.guests} orang`;
               <div className="md:col-span-2">
                 <label htmlFor="guests" className="text-coffee-800 font-semibold mb-2 flex items-center gap-2">
                   <Users className="w-5 h-5" />
-                  Jumlah Tamu <span className="text-red-400">*</span>
+                  Number of Guests <span className="text-red-400">*</span>
                 </label>
                 <select
                   id="guests"
@@ -252,10 +252,10 @@ Jumlah Tamu: ${formData.guests} orang`;
                 >
                   {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map(num => (
                     <option key={num} value={num} className="bg-white">
-                      {num} {num === 1 ? 'orang' : 'orang'}
+                      {num} {num === 1 ? 'guest' : 'guests'}
                     </option>
                   ))}
-                  <option value="10+" className="bg-white">10+ orang</option>
+                  <option value="10+" className="bg-white">10+ guests</option>
                 </select>
               </div>
             </div>
@@ -269,11 +269,11 @@ Jumlah Tamu: ${formData.guests} orang`;
             className="w-full mt-10 bg-gold hover:bg-gold-dark text-white py-4 rounded-full font-bold text-lg transition-colors flex items-center justify-center gap-3 shadow-lg"
           >
             <Send className="w-5 h-5" />
-            Kirim via WhatsApp
+            Send via WhatsApp
           </motion.button>
 
           <p className="text-coffee-700/60 text-sm text-center mt-6">
-            * Reservasi akan dikirim melalui WhatsApp ke cabang yang Anda pilih
+            * The reservation will be sent via WhatsApp to your selected branch.
           </p>
         </motion.form>
       </div>

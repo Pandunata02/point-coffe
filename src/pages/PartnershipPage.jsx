@@ -24,7 +24,7 @@ const PartnershipPage = () => {
               Partnership
             </h1>
             <p className="text-xl text-cream/80 max-w-2xl mx-auto">
-              Mari berkembang bersama dengan KOMA Coffee. Kami membuka peluang kemitraan untuk bisnis yang ingin bergabung dalam perjalanan kopi kami.
+              Let's grow together with KOMA Coffee. We open partnership opportunities for businesses that want to be part of our coffee journey.
             </p>
           </div>
         </motion.div>
@@ -45,8 +45,8 @@ const PartnershipPage = () => {
           </h2>
           
           <p className="text-coffee-700 text-lg leading-relaxed mb-8">
-            Kami sedang menyiapkan program kemitraan yang menarik untuk Anda. 
-            Nantikan informasi lebih lanjut tentang peluang bisnis bersama KOMA Coffee.
+            We're preparing an exciting partnership program for you. Stay tuned for more
+            information about business opportunities with KOMA Coffee.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12">
@@ -63,7 +63,7 @@ const PartnershipPage = () => {
 
             <div className="glass border border-beige-200 p-6 rounded-2xl bg-white/30">
               <Phone className="w-8 h-8 text-gold mx-auto mb-4" />
-              <h3 className="text-coffee-800 font-bold text-lg mb-2">Telepon</h3>
+              <h3 className="text-coffee-800 font-bold text-lg mb-2">Phone</h3>
               <a 
                 href="tel:+622112345678" 
                 className="text-gold hover:text-gold-dark transition-colors"

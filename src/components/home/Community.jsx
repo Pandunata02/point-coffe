@@ -9,21 +9,21 @@ const Community = () => {
     {
       id: 1,
       image: 'https://images.unsplash.com/photo-1511578314322-379afb476865?w=800',
-      title: 'Komunitas Sepeda',
-      description: 'Spot favorit para pesepeda untuk bertemu sebelum dan sesudah gowes',
+      title: 'Cycling Community',
+      description: 'The favorite spot for cyclists to meet before and after their rides',
     },
     {
       id: 2,
       image: 'https://images.unsplash.com/photo-1559056199-641a0ac8b55e?w=800',
       title: 'Running Club',
-      description: 'Mulai hari dengan lari pagi dan kopi segar bersama teman',
+      description: 'Start your day with a morning run and fresh coffee with friends',
     },
   ];
 
   return (
     <section
       id="community"
-      className="py-20 bg-beige-50"
+      className="py-20"
       ref={sectionRef}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -34,11 +34,11 @@ const Community = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-5xl md:text-6xl font-bold text-coffee-800 mb-6 font-serif">
-            Komunitas Kami
+          <h2 className="text-5xl md:text-6xl font-bold text-cream mb-6 font-serif">
+            Our Community
           </h2>
-          <p className="text-xl text-coffee-700 max-w-3xl mx-auto leading-relaxed">
-            KOMA adalah rumah bagi berbagai komunitas. Dari pesepeda, pelari, hingga pekerja kreatif - semua menemukan tempat mereka di sini.
+          <p className="text-xl text-cream/80 max-w-3xl mx-auto leading-relaxed">
+            KOMA is home to many communities. From cyclists and runners to creative professionals — everyone finds their place here.
           </p>
         </motion.div>
 
@@ -59,7 +59,7 @@ const Community = () => {
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
               />
 
-              {/* Overlay dengan Title & Description */}
+              {/* Overlay with Title & Description */}
               <div className="absolute inset-0 bg-gradient-to-t from-coffee-900/95 via-coffee-900/60 to-transparent flex flex-col justify-end p-8">
                 <h3 className="text-white font-bold text-3xl mb-3 font-serif drop-shadow-lg">
                   {card.title}

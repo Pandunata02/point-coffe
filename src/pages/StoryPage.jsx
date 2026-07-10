@@ -10,12 +10,12 @@ const StoryPage = () => {
     {
       icon: Coffee,
       title: 'Passion for Coffee',
-      description: 'Dimulai dengan cinta terhadap kopi berkualitas tinggi dan keinginan untuk berbagi pengalaman istimewa',
+      description: 'It all started with a love for high-quality coffee and the desire to share an exceptional experience',
     },
     {
       icon: Heart,
       title: 'First Location',
-      description: 'Membuka café pertama di Menteng dengan komitmen untuk menyediakan kopi terbaik',
+      description: 'Opened our first café in Menteng with a commitment to serving the finest coffee',
     },
   ];
 
@@ -23,12 +23,12 @@ const StoryPage = () => {
     {
       icon: Users,
       title: 'Growing Community',
-      description: 'Membangun komunitas pecinta kopi yang solid dan mengadakan berbagai workshop',
+      description: 'Built a solid community of coffee lovers and hosted a variety of workshops',
     },
     {
       icon: Sprout,
       title: 'Expansion',
-      description: 'Membuka cabang baru di Sudirman dan Bali dengan konsep unik di setiap lokasi',
+      description: 'Expanded to new branches in Sudirman and Bali with a unique concept at each location',
     },
   ];
 
@@ -40,29 +40,35 @@ const StoryPage = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-sand">
-      {/* Hero Section */}
-      <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-coffee-900/80 to-coffee-800/80 z-10" />
-        <img
-          src="https://res.cloudinary.com/dpadqzd98/image/upload/v1780171603/about-bg_f3vrt8.jpg?w=1600"
-          alt="Our Story"
-          className="absolute inset-0 w-full h-full object-cover"
-        />
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-          className="relative z-20 text-center px-4"
-        >
-          <h1 className="text-6xl md:text-7xl font-bold text-cream mb-6 font-display drop-shadow-sm">
-            Cerita Kami
-          </h1>
-          <p className="text-2xl text-cream/80 max-w-2xl mx-auto">
-            Perjalanan dari secangkir kopi menjadi keluarga besar
-          </p>
-        </motion.div>
-      </section>
+    <div
+      className="relative min-h-screen"
+      style={{
+        backgroundImage: `url('https://res.cloudinary.com/dpadqzd98/image/upload/v1780171603/about-bg_f3vrt8.jpg?w=1600')`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+      }}
+    >
+      {/* Dark overlay for legibility across all sections */}
+      <div className="absolute inset-0 bg-gradient-to-b from-coffee-900/85 via-coffee-900/65 to-coffee-900/85 pointer-events-none" />
+
+      <div className="relative">
+        {/* Hero Section */}
+        <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            className="text-center px-4"
+          >
+            <h1 className="text-6xl md:text-7xl font-bold text-cream mb-6 font-display drop-shadow-sm">
+              Our Story
+            </h1>
+            <p className="text-2xl text-cream/80 max-w-2xl mx-auto">
+              From a single cup of coffee to a big family
+            </p>
+          </motion.div>
+        </section>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20" ref={sectionRef}>
         {/* Section 1: Tahun 2020 - Text Left, Image Right */}
@@ -78,18 +84,17 @@ const StoryPage = () => {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <h2 className="text-5xl md:text-6xl font-bold text-coffee-800 mb-8 font-serif">
-              Tahun 2020: Awal Mula
+            <h2 className="text-5xl md:text-6xl font-bold text-cream mb-8 font-serif">
+              Year 2020: The Beginning
             </h2>
-            <p className="text-coffee-800 text-xl leading-relaxed mb-6">
-              Dimulai dengan cinta terhadap kopi berkualitas tinggi dan keinginan untuk 
-              berbagi pengalaman istimewa dengan setiap cangkir yang kami sajikan.
+            <p className="text-cream/90 text-xl leading-relaxed mb-6">
+              It all started with a love for high-quality coffee and the desire to share
+              an exceptional experience with every cup we serve.
             </p>
-            <p className="text-coffee-700 text-lg leading-relaxed">
-              Di tengah tahun yang penuh tantangan, kami membuka café pertama di Menteng 
-              dengan komitmen untuk menyediakan kopi terbaik dan menciptakan ruang yang 
-              hangat untuk semua orang. Setiap biji kopi dipilih dengan cermat, setiap 
-              seduhan dibuat dengan penuh perhatian.
+            <p className="text-cream/80 text-lg leading-relaxed">
+              In the midst of a challenging year, we opened our first café in Menteng with
+              a commitment to serving the finest coffee and creating a warm space for everyone.
+              Every bean is carefully selected, every brew crafted with care.
             </p>
           </motion.div>
 
@@ -138,18 +143,17 @@ const StoryPage = () => {
             transition={{ duration: 0.8, delay: 1 }}
             className="order-1 lg:order-2"
           >
-            <h2 className="text-5xl md:text-6xl font-bold text-coffee-800 mb-8 font-serif">
-              Berkembang Bersama
+            <h2 className="text-5xl md:text-6xl font-bold text-cream mb-8 font-serif">
+              Growing Together
             </h2>
-            <p className="text-coffee-800 text-xl leading-relaxed mb-6">
-              Dari satu lokasi menjadi keluarga besar dengan tiga cabang di Jakarta dan Bali. 
-              Kami tumbuh bersama komunitas pecinta kopi yang setia.
+            <p className="text-cream/90 text-xl leading-relaxed mb-6">
+              From one location to a big family with three branches in Jakarta and Bali.
+              We grew alongside a loyal community of coffee lovers.
             </p>
-            <p className="text-coffee-700 text-lg leading-relaxed">
-              Setiap cabang memiliki karakter unik, namun tetap dengan komitmen yang sama: 
-              menghadirkan pengalaman kopi terbaik. Dari workshop brewing, cupping sessions, 
-              hingga acara komunitas, kami terus membangun koneksi yang bermakna melalui 
-              secangkir kopi.
+            <p className="text-cream/80 text-lg leading-relaxed">
+              Each branch has its own character, but shares the same commitment: delivering
+              the finest coffee experience. From brewing workshops and cupping sessions to
+              community events, we continue to build meaningful connections over a cup of coffee.
             </p>
           </motion.div>
         </motion.div>
@@ -160,8 +164,8 @@ const StoryPage = () => {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 1.2 }}
         >
-          <h2 className="text-5xl font-bold text-coffee-800 mb-12 font-serif text-center">
-            Momen Berkesan
+          <h2 className="text-5xl font-bold text-cream mb-12 font-serif text-center">
+            Memorable Moments
           </h2>
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -183,6 +187,7 @@ const StoryPage = () => {
             ))}
           </div>
         </motion.div>
+      </div>
       </div>
     </div>
   );

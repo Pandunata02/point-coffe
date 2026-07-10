@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 
-// Logo WhatsApp Asli
+// Official WhatsApp Logo
 const WhatsAppIcon = () => (
     <svg
         width="24"
@@ -17,18 +17,18 @@ const WhatsAppButton = () => {
     const handleClick = () => {
         // Replace with your actual WhatsApp number
         const phoneNumber = '1234567890';
-        const message = encodeURIComponent('Hi! I would like to order from Aroma Café');
+        const message = encodeURIComponent('Hi! I would like to place an order from KOMA Coffee.');
         window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
     };
 
     return (
         <div className="fixed bottom-24 right-8 z-40 flex items-center gap-3 group">
-            {/* Text Box - muncul saat hover */}
+            {/* Text Box - shown on hover */}
             <div className="bg-green-500 text-white px-4 py-2 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-all duration-300 whitespace-nowrap font-semibold">
                 Order on WhatsApp
             </div>
 
-            {/* Button Icon WhatsApp - selalu terlihat */}
+            {/* WhatsApp Button Icon - always visible */}
             <motion.button
                 onClick={handleClick}
                 whileHover={{ scale: 1.1 }}

@@ -9,7 +9,7 @@ const Ambiance = () => {
     {
       id: 1,
       image: 'https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=800',
-      title: 'Workspace Nyaman',
+      title: 'Cozy Workspace',
     },
     {
       id: 2,
@@ -37,11 +37,11 @@ const Ambiance = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-5xl md:text-6xl font-bold text-coffee-800 mb-6 font-serif">
-            Ambiance Kami
+          <h2 className="text-5xl md:text-6xl font-bold text-cream mb-6 font-serif">
+            Our Ambiance
           </h2>
-          <p className="text-xl text-coffee-700 max-w-2xl mx-auto">
-            Tiga spot utama dengan suasana yang berbeda
+          <p className="text-xl text-cream/80 max-w-2xl mx-auto">
+            Three signature spots with distinct atmospheres
           </p>
         </motion.div>
 
